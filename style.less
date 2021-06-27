@@ -1,13 +1,34 @@
 @orange:#d2b78b;
 @white: #fff;
 @black: #333;
+
 @font-face {
-	font-family: 'Fira Sans';
-	src: url(../font/Fira_Sans);
+	font-family: 'FS regular';
+	src: url(./font/Fira_Sans/FiraSans-Regular.woff);
 }
 @font-face {
-	font-family:'Cormorant Garamond' ;
-	src: url(../font/comorant-font);
+	font-family: 'FS Bold';
+	src: url(./font/Fira_Sans/FiraSans-Bold.woff);
+}
+@font-face {
+	font-family:'CM SBI' ;
+	src: url(./font/comorant-font/CormorantGaramond-SemiBoldItalic.woff);
+}
+@font-face {
+	font-family: 'CM Medium';
+	src: url(./font/comorant-font/CormorantGaramond-Medium.woff);
+}
+@font-face {
+	font-family: 'CM Bold';
+	src: url(./font/comorant-font/CormorantGaramond-Bold.woff);
+}
+@font-face {
+	font-family: 'CM SemiBold';
+	src: url(./font/comorant-font/CormorantGaramond-SemiBold.woff);
+}
+@font-face {
+	font-family: 'CM Regular';
+	src: url(./font/comorant-font/CormorantGaramond-Regular.woff);
 }
 * {
 	margin: 0;
@@ -43,7 +64,7 @@
     font-size: 16px;
     text-align: center;
     box-sizing: border-box;
-    font-family: 'Fira Sans';
+    font-family: 'FS Bold';
     font-weight: bold;
     letter-spacing: 2.5px;
     width: 100%;
@@ -96,14 +117,14 @@
     transform: translateX(-25%);
 }
 .header-text h10{
-	font-family:'Fira Sans';
+	font-family: 'FS regular';
 	font-size: 24px;
 	letter-spacing: 12px;
 	word-spacing: 3px;
 	font-weight: 400;
 }
 .header-text p{
-	font-family:'Cormorant Garamond';
+	font-family: 'CM SBI';
 	font-weight: 500;
 	font-size: 100px;
 	word-spacing: 3px;
@@ -142,7 +163,7 @@
 	opacity: 1;
 }
 .menu-doc a{
-	font-family:'Cormorant Garamond';
+	font-family:'CM Medium';
 	font-size: 24px;
 	font-weight: 400;
 	letter-spacing: 3px;
@@ -159,28 +180,34 @@
 .under-banner {
 	height: 100%;
 	display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	box-sizing: border-box;
 	text-align: center;
 	width: 100%;
 	max-width: 1170px;
-	margin-top: 17px;
 	margin-left: auto;
 	margin-right: auto;
+	/* border-left: 1px solid #efefef; */
+	border-bottom: 1px solid #efefef;
+    
 }
 .under-banner-text {
 	width: 33.33%;
 	height: 100%;
 	background-color: @white ;
+	padding-top: 17px;
+	padding-bottom: 11px;
+	border-left: 1px solid #efefef;
+	border-right: 1px solid #efefef;
 }
 .under-banner :hover{
 	background: @orange;
 }
 .under-banner-text__top {
 	.p1 {
-		font-family: 'Cormorant Garamond';
+		font-family: 'CM Bold';
 		font-size: 18px;
 		font-weight: bold;
 		text-align: center;
@@ -192,7 +219,7 @@
 		line-height: 25px;
 	}
 	.p2 {
-		font-family: 'Cormorant Garamond';
+		font-family: 'CM Bold';
 		font-size: 18px;
 		font-weight: bold;
 		text-align: center;
@@ -204,7 +231,7 @@
 		line-height: 25px;
 	}
 	.p3 {
-		font-family: 'Cormorant Garamond';
+		font-family: 'CM Bold';
 		font-size: 18px;
 		font-weight: bold;
 		text-align: center;
@@ -217,7 +244,7 @@
 }
 .under-banner-text__bot {
 	h1 {
-		font-family: 'Fira Sans';
+		font-family: 'FS Regular';
 		font-size: 14px;
 		text-align: center;
 		line-height: 0px;
@@ -225,7 +252,7 @@
 		color:#cfcfcf
 	}
 	h2 {
-		font-family: 'Fira Sans';
+		font-family: 'FS Regular';
 		font-size: 14px;
 		text-align: center;
 		line-height: 0px;
@@ -238,11 +265,11 @@
 	height: 100%;
 }
 .Its-started {
-	font-family: 'Cormorant Garamond';
+	font-family: 'CM SemiBold';
 	font-size: 34px;
 	font-weight: Bolder;
 	text-align: center;
-	margin-top: 121px;
+	margin-top: 108px;
 }
 /* .product {
     width: 100%;
@@ -286,13 +313,13 @@
     left: 50%;
 }
 .product-top--left__text h3{
-    font-family: 'Fira Sans';
+    font-family: 'FS Regular';
     font-size: 24px;
     padding-bottom: 8px;
     word-spacing: 6px;
 }
 .product-top--left__text p{
-        font-family: 'Cormorant Garamond';
+    font-family: 'CM Bold';
     font-size: 25px;
     font-weight: bold;
     color: @orange;
@@ -309,19 +336,20 @@
 }
 .product-top--middle__text{
     position: absolute;
-	transform: translate(0%, 2%);
-    top: 23%;
+	transform: translate(1%, 2%);
+    top: 24%;
     right: 9%
 }
 .product-top--middle__text h4{
-    font-family: 'Fira Sans';
-    font-size: 22px;
-    letter-spacing: 2.2px;
+	font-family: 'FS Regular';
+	font-size: 18px;
+	letter-spacing: 3.1px;
     text-align: center;
     padding-bottom: 8px;
+    word-spacing: 3px;
 }
 .product-top--middle__text p{
-    font-family: 'Cormorant Garamond';
+    font-family: 'CM Bold';
     font-size: 100px;
     font-weight: bold;
     word-spacing: 10px;
@@ -329,13 +357,13 @@
     text-align: center;
 }
 .product-top--middle__text h5{
-    font-family: 'Cormorant Garamond';
+    font-family: 'CM Bold';
     font-size: 24px;
     font-weight: bold;
     margin-top: -18px;
 }
 .product-top--middle__text h6{
-    font-family: 'Fira Sans';
+    font-family: 'FS Bold';
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -358,14 +386,14 @@
     left: 10%;
 }
 .product-top--right__text h7{
-    font-family: 'Fira Sans';
+    font-family: 'FS Regular';
     font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 .product-top--right__text p{
-    font-family: 'Cormorant Garamond';
+    font-family: 'CM Bold';
     font-size: 70px;
     font-weight: bold;
     color: @orange;
@@ -418,14 +446,14 @@
     
 }
 .product-bot--middle__text h8{
-    font-family: 'Fira Sans';
+    font-family: 'FS Regular';
     font-size: 24px;
     padding-bottom: 10px;
     word-spacing: 0.9px;
     letter-spacing: 1px;
 }
 .product-bot--middle__text p{
-        font-family: 'Cormorant Garamond';
+        font-family: 'CM Bold';
     font-size: 21px;
     font-weight: 500;
     color: @orange;
@@ -440,7 +468,7 @@
     transform: translate(7%,14%);
 }
 .product-bot--right__text h9{
-    font-family: 'Cormorant Garamond';
+    font-family: 'CM Bold';
     font-size: 48px;
     font-weight: bold;
     padding-bottom: 10px;
@@ -472,12 +500,12 @@
   display: flex;
 }
 .main-content-feature__feature-item {
-	font-family: 'Cormorant Garamond';
+	font-family: 'CM Bold';
 	font-size: 56px;
 	font-weight: Bold;
 }
 .main-content-feature__view {
-	font-family: 'Fira Sans';
+	font-family: 'FS Bold';
 	font-size: 14px;
 	font-weight: Bold;
 	text-transform: uppercase;
@@ -536,7 +564,7 @@
     text-align: center;
 }
 .name {
-    font-family: 'Fira Sans';
+    font-family: 'FS Regular';
     font-size: 14px;
     font-weight: bold;
     margin-right: 29px;
@@ -547,7 +575,7 @@
     margin-top: 0px;
 }
 .dollar {
-    font-family: 'Cormorant Garamond';
+    font-family: 'CM Bold';
     font-size: 20px;
     font-weight: bold;
     color: #d6ba8d;
@@ -569,7 +597,7 @@
 	width: 100%;
     a {
         font-size: 14px;
-        font-family: 'Fira Sans';
+        font-family: 'FS Bold';
         text-transform: uppercase;
         background-color: #d6ba8d;
         color: @white ;
@@ -626,7 +654,7 @@
 	max-width: 1920px;
 	height: auto;
 	background-color: #faf9f9;
-	margin-top: 90px;
+	margin-top: 94px;
 	position: relative;
 	padding: 0 15px;
 }
@@ -637,8 +665,8 @@
     color: @black;
     font-weight: Bold;
     text-align: center;
-    font-family: 'Cormorant Garamond';
-    top: 0%;
+    font-family: 'CM Bold';
+    top: -1%;
     left: 50%;
 	transform: translateX(-50%);
 }
@@ -659,7 +687,7 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	box-sizing: border-box;
-	padding-top: 112px;
+	padding-top: 109px;
 }
 .blog-content {
 	background-color: @white ;
@@ -682,7 +710,7 @@
 }
 .blog-content__description2 {
 	margin: 20px;
-	font-family: 'Cormorant Garamond';
+	font-family: 'CM Bold';
 	font-size: 24px;
 	font-weight: bold;
 	margin: 19px 0px 0px 32px;
@@ -691,7 +719,7 @@
 	padding-bottom: 49px;
 }
 .blog-content__description1 {
-	font-family: 'Fira Sans';
+	font-family: 'FS Regular';
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 1.3px;
@@ -705,14 +733,14 @@
 	padding-left: 10px;
 	margin-top: -44px;
 	display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	i {
 		padding: 64px 0px 0px 17px;
 	}
 	a {
-		font-family: 'Fira Sans';
+		font-family: 'FS Regular';
 		margin-right: 26px;
 		color: #696969;
 		margin-left: 11px;
@@ -736,7 +764,7 @@
 }
 .gotoblog {
 	a {
-		font-family: 'Cormorant Garamond';
+		font-family: 'CM Regular';
 		font-size: 24px;
 		text-align: center;
 		color: @black;
@@ -825,7 +853,7 @@
 			text-align: center;
 			list-style: none;
 			a {
-				font-family: 'Fira Sans';
+				font-family: 'FS Bold';
 				font-size: 14px;
 				color: #ababab;
 				text-transform: uppercase;
@@ -852,7 +880,7 @@
 		text-decoration: none;
 		margin: 21px -2px;
 		color: #ababab;
-		font-family: 'Fira Sans';
+		font-family: 'FS Bold';
 		font-size: 14px;
 		font-weight: bold;
 		border: 1px solid;
@@ -888,15 +916,15 @@
 	margin-right: auto;
 	justify-content: space-between;
 	box-sizing: border-box;
-	margin-top: -50px;
+	margin-top: -49px;
 	padding-bottom: 70px;
 }
 .content-footer {
-	font-family: 'Fira Sans';
+	font-family: 'FS Regular';
 	font-size: 14px;
 	font-weight: bold;
 	color: #696969;
-	margin: 19px 0px 0px -2px;
+	margin: 19px 0px 0px 0px;
 	line-height: 29px;
 }
 .logo-footer {
